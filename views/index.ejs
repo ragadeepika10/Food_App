@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Food Generator</title>
+</head>
+<body>
+    <h1>Select a Day of the Week</h1>
+    <form action="/getFood" method="POST">
+        <label for="day">Choose a day:</label>
+        <select name="day" id="day">
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+        </select>
+        <button type="submit">Get Food</button>
+    </form>
+
+    <% if (food) { %>
+        <h2>Your random food for <%= day %> is: <%= food %></h2> <!-- Display the random food -->
+    <% } %>
+</body>
+</html>
